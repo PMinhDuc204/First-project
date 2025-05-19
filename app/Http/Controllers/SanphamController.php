@@ -50,7 +50,7 @@ class SanphamController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'warranty' => $request->warranty,
-            'image' => $request->$imageName
+            'image' => $imageName
         ]);
 
         return redirect()->route('sanpham.index')->with('success', 'Sản phẩm đã được thêm thành công!');

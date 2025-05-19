@@ -9,7 +9,10 @@ class OrderItem extends Model
 {
     //
     protected $table = 'order_items';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
     protected $fillable = ['id', 'order_id', 'product_id', 'quantity', 'price'];
+
     public function order()
 {
     return $this->belongsTo(Order::class);
